@@ -1,0 +1,64 @@
+name: Bank Customer Churn Prediction Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build_scan_and_push_image:
+    name: Build, scan, and push the Docker image
+    runs-on: ubuntu-latest
+    if: |
+      github.event_name == 'push' || github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true) 
+    steps:
+    
+      # Checkout the repository
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+        
+      # Build the Docker image
+      - name: Build Docker Image
+        run: docker build -f Dockerfile -t nithinpj09/churn_prediction:v1.0 .
+
+      # Log in to Docker Hub
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # Push the Docker image to Docker Hub
+      - name: Push Docker Image
+        run: docker push nithinpj09/churn_prediction:v1.0
+
+  deploy:
+    name: Deploy to VM
+    runs-on: ubuntu-latest
+    needs: build_scan_and_push_image   
+    steps:
+    
+      # Connect to the VM and perform deployment tasks
+      - name: Deploy
+        env:
+            PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+            HOST_NAME: ${{ secrets.HOST_NAME }}
+            USER_NAME: ${{ secrets.USER_NAME }}
+      
+        run: |
+          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOST_NAME} << EOF
+              if docker ps | grep -q 'App'
+              then 
+                  echo "Stopping and removing the container."
+                  docker stop App
+                  docker rm App                      
+              fi
+              docker rmi nithinpj09/churn_prediction:v1.0
+              docker run -d --restart always -p 80:8000 --name App nithinpj09/churn_prediction:v1.0
+          EOF
