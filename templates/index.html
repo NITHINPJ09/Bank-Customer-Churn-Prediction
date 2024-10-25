@@ -24,7 +24,7 @@
  
       <!-- Inputs for our ML model -->
        <div class="Prediction_form">
-        <p> <b> Prediction Form </b> </p>
+        <p> <b> Forecast Form </b> </p>
         <br>
          <form action="{{url_for('predict')}}" method="post">
          <!-- Geography -->
@@ -60,7 +60,7 @@
            <br><br>
  
            <!-- Tenure -->
-           <label for="tenure">Years as Bank Customer:</label><br>
+           <label for="tenure">Years of Service as a Bank Customer:</label><br>
            <input type="number" required="required" id="Tenure" name="tenure">
            <br><br>
  
@@ -70,7 +70,7 @@
            <br><br>
  
            <!-- Num of Products -->
-           <label for="numofproducts">Number of Products Used:</label><br>
+           <label for="numofproducts">Number of Products Utilized:</label><br>
            <select name="numofproducts" required="required" id="NumofProducts">
              <option disabled selected value></option>
              <option value="1">1</option>
@@ -81,7 +81,7 @@
            <br><br>
            
            <!-- Credit Card -->
-           <label for="hascrcard">Has an Active Credit Card:</label><br>
+           <label for="hascrcard">Possesses an Active Credit Card:</label><br>
            <select name="hascrcard" required="required" id="HasCrCard"><br>
                <option disabled selected value></option>
                <option value="1">Yes</option>
@@ -90,7 +90,7 @@
            <br><br>
  
            <!-- Active Member -->
-           <label for="isactivemember">Is an Active Bank Member:</label><br>
+           <label for="isactivemember">Is an Active Bank Account Holder:</label><br>
            <select name="isactivemember" required="required" id="isActiveMember">
              <option disabled selected value></option>
              <option value="1">Yes</option>
