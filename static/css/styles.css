@@ -1,51 +1,47 @@
-p,h2 {
+p, h2 {
     /* Just for Debugging */
-    /* border: solid green; */
+    /* border: solid #A1C298; */
     padding: 20px;
-    background-color: #FDEEDC;
+    background-color: #D9EAD3; /* light mint */
     margin: auto;
 }
 
-body{
-    background-color:  #F1A661;
+body {
+    background-color: #B7CADB; /* light pastel blue */
     /* Just for Debugging */
-    /* border: solid orange; */
+    /* border: solid #8EAFBF; */
     padding: 20px;
 }
 
-div{
-  /* Just for Debugging */
-  /* border: solid blue; */
+div {
+    /* Just for Debugging */
+    /* border: solid #88A6B6; */
     padding: 10px;
-    background-color: #FFD8A9;
+    background-color: #A3C9D9; /* soft blue-gray */
 }
 
-hr{
-  border: 12px dotted #E45826;
-  background-color: #FFD8A9;
-  border-bottom: 0px;
-  width: 12%;
-  margin: 15px auto 5px;
-
+hr {
+    border: 12px dotted #88A6B6; /* darker blue-gray */
+    background-color: #A3C9D9;
+    border-bottom: 0px;
+    width: 12%;
+    margin: 15px auto 5px;
 }
 
-/* Predict Page body  */
-.Result_Pred_Page{
-  background-color:#FFD8A9;
+/* Predict Page body */
+.Result_Pred_Page {
+    background-color: #A3C9D9;
 }
-
 
 /* CSS for the Forms */
-
-form{
-    width:80%;
+form {
+    width: 80%;
     /* Just for Debugging */
-    /* border: solid blueviolet; */
+    /* border: solid #769FAB; */
     padding: 20px;
-    /* text-align: center; */
     line-height: 26px;
     margin: auto;
-  }
+}
 
 input[type=number] {
     width: 100%;
@@ -53,8 +49,8 @@ input[type=number] {
     margin: 8px 0;
     box-sizing: border-box;
     border: none;
-    border-bottom: 2px solid #FCF8E8;
-  }
+    border-bottom: 2px solid #D3E1E6; /* light gray-blue */
+}
 
 select {
     width: 100%;
@@ -62,10 +58,9 @@ select {
     border: none;
     border-radius: 4px;
     background-color: white;
-    border: none;
-    border-bottom: 2px solid #FCF8E8;
-  }
+    border-bottom: 2px solid #D3E1E6;
+}
 
-.footer{
-  text-align: center;
+.footer {
+    text-align: center;
 }
