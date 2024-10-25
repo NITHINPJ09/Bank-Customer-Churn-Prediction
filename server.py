@@ -29,9 +29,7 @@ def predict():
     scaler = joblib.load('scaler.pkl')
     model = joblib.load('churn_predict_model.pkl')
 
-    X_new = np.array([[creditscore, age, tenure, balance, numofproducts, hascrcard, isactivemember, estimatedsalary, g2, g3, gender]])
-    X_new_df = pd.DataFrame(X_new, columns=['CreditScore', 'Age','Tenure', 'Balance','NumOfProducts', 'HasCrCard','IsActiveMember', 'EstimatedSalary','Geography_Germany', 'Geography_Spain','Gender_Male'])
-    pred = model.predict(scaler.transform(X_new_df))
+    pred = model.predict(scaler.transform([[creditscore, age, tenure, balance, numofproducts, hascrcard, isactivemember, estimatedsalary, g2, g3, gender]]))
     prediction = int(pred[0])
     print(prediction)
 
