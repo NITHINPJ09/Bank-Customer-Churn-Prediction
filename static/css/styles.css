@@ -5,7 +5,7 @@ p, h2 {
 }
 
 body {
-    background-color: #44606f; 
+    background-color: #3b7791; 
     padding: 20px;
 }
 
@@ -15,7 +15,7 @@ div {
 }
 
 hr {
-    border: 12px dotted #44606f; 
+    border: 12px dotted #3b7791; 
     background-color: #A3C9D9;
     border-bottom: 0px;
     width: 12%;
