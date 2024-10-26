@@ -15,13 +15,13 @@ body {
 
 div {
     /* Just for Debugging */
-    /* border: solid #88A6B6; */
+    /* border: solid #44606f; */
     padding: 10px;
     background-color: #A3C9D9; /* soft blue-gray */
 }
 
 hr {
-    border: 12px dotted #88A6B6; /* darker blue-gray */
+    border: 12px dotted #44606f; /* darker blue-gray */
     background-color: #A3C9D9;
     border-bottom: 0px;
     width: 12%;
