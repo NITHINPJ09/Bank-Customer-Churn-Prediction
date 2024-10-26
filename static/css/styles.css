@@ -1,43 +1,33 @@
 p, h2 {
-    /* Just for Debugging */
-    /* border: solid #A1C298; */
     padding: 20px;
-    background-color: #D9EAD3; /* light mint */
+    background-color: #D9EAD3; 
     margin: auto;
 }
 
 body {
-    background-color: #B7CADB; /* light pastel blue */
-    /* Just for Debugging */
-    /* border: solid #8EAFBF; */
+    background-color: #44606f; 
     padding: 20px;
 }
 
 div {
-    /* Just for Debugging */
-    /* border: solid #44606f; */
     padding: 10px;
-    background-color: #A3C9D9; /* soft blue-gray */
+    background-color: #A3C9D9; 
 }
 
 hr {
-    border: 12px dotted #44606f; /* darker blue-gray */
+    border: 12px dotted #44606f; 
     background-color: #A3C9D9;
     border-bottom: 0px;
     width: 12%;
     margin: 15px auto 5px;
 }
 
-/* Predict Page body */
 .Result_Pred_Page {
     background-color: #A3C9D9;
 }
 
-/* CSS for the Forms */
 form {
     width: 80%;
-    /* Just for Debugging */
-    /* border: solid #769FAB; */
     padding: 20px;
     line-height: 26px;
     margin: auto;
@@ -49,7 +39,7 @@ input[type=number] {
     margin: 8px 0;
     box-sizing: border-box;
     border: none;
-    border-bottom: 2px solid #D3E1E6; /* light gray-blue */
+    border-bottom: 2px solid #D3E1E6;
 }
 
 select {
