@@ -1,51 +1,37 @@
-p,h2 {
-    /* Just for Debugging */
-    /* border: solid green; */
+p, h2 {
     padding: 20px;
-    background-color: #FDEEDC;
+    background-color: #DBEAF0; 
     margin: auto;
 }
 
-body{
-    background-color:  #F1A661;
-    /* Just for Debugging */
-    /* border: solid orange; */
+body {
+    background-color: #A3C9D9; 
     padding: 20px;
 }
 
-div{
-  /* Just for Debugging */
-  /* border: solid blue; */
+div {
     padding: 10px;
-    background-color: #FFD8A9;
+    background-color: #A3C9D9; 
 }
 
-hr{
-  border: 12px dotted #E45826;
-  background-color: #FFD8A9;
-  border-bottom: 0px;
-  width: 12%;
-  margin: 15px auto 5px;
-
+hr {
+    border: 12px dotted #3B7791; 
+    background-color: #A3C9D9;
+    border-bottom: 0px;
+    width: 12%;
+    margin: 15px auto 5px;
 }
 
-/* Predict Page body  */
-.Result_Pred_Page{
-  background-color:#FFD8A9;
+.Result_Pred_Page {
+    background-color: #A3C9D9;
 }
 
-
-/* CSS for the Forms */
-
-form{
-    width:80%;
-    /* Just for Debugging */
-    /* border: solid blueviolet; */
+form {
+    width: 80%;
     padding: 20px;
-    /* text-align: center; */
     line-height: 26px;
     margin: auto;
-  }
+}
 
 input[type=number] {
     width: 100%;
@@ -53,8 +39,8 @@ input[type=number] {
     margin: 8px 0;
     box-sizing: border-box;
     border: none;
-    border-bottom: 2px solid #FCF8E8;
-  }
+    border-bottom: 2px solid #D3E1E6;
+}
 
 select {
     width: 100%;
@@ -62,12 +48,7 @@ select {
     border: none;
     border-radius: 4px;
     background-color: white;
-    border: none;
-    border-bottom: 2px solid #FCF8E8;
-  }
-
-.footer{
-  text-align: center;
+    border-bottom: 2px solid #D3E1E6;
 }
 
 .footer {
